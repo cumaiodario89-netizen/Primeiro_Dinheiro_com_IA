@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Primeiro dinheiro com IA | Ebook IA Academy</title>
+<meta name="description" content="Guia rápido e prático para quem tem só o telemóvel e quer fazer o primeiro dinheiro com IA.">
+<meta property="og:title" content="Primeiro dinheiro com IA | Ebook IA Academy">
+<meta property="og:description" content="Do zero ao primeiro cliente, só com o telemóvel. Prompts prontos, mensagens de WhatsApp e plano de 7 dias.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="prog"></div>
+<header class="hero" id="hero"><canvas id="net"></canvas><div class="wrap">
+ <div>
+  <span class="tag" id="tag"></span>
+  <h1 id="title"></h1>
+  <p class="sub" id="sub"></p>
+  <p class="typer">Com IA, venda <b id="typed"></b><i class="caret"></i></p>
+  <a class="btn big" data-buy="hero" href="#"></a>
+  <p class="small" id="note"></p><span id="heroNote"></span>
+ </div>
+ <div class="tilt" id="tilt"><img class="cover" src="assets/capa.jpg" alt="Capa do ebook Primeiro dinheiro com IA, da IA Academy" width="340" height="480"></div>
+</div></header>
+<noscript><p class="noscript">Ative o JavaScript para ver esta página. Para comprar, fale connosco no WhatsApp: +258 86 735 5701.</p></noscript>
+<section class="stats"><div class="wrap"><div class="grid s4" id="statsGrid"></div></div></section>
+
+
+<section class="pain"><div class="wrap">
+ <h2 id="painTitle"></h2><p class="lead" id="painIntro"></p><div class="grid c3" id="painGrid"></div>
+</div></section>
+
+<section style="background:var(--surface)"><div class="wrap">
+ <h2 id="benefitsTitle"></h2><p class="lead" id="benefitsIntro"></p><div class="grid c3" id="benGrid"></div>
+ <p class="lead" style="margin-top:20px" id="benExtra"></p>
+</div></section>
+
+<section><div class="wrap two">
+ <div class="card reveal"><h2 style="font-size:22px" id="yesTitle"></h2><ul class="ck" id="yesList"></ul></div>
+ <div class="card reveal"><h2 style="font-size:22px" id="noTitle"></h2><ul class="ck no" id="noList"></ul></div>
+</div></section>
+
+
+<section id="sim"><div class="wrap">
+ <h2>Simule o seu primeiro mês</h2>
+ <p class="lead">Escolha um serviço e quantos clientes acha que consegue por semana. Os valores são exemplos do ebook, não uma garantia.</p>
+ <div class="panel reveal">
+  <label>Serviço<select id="simSvc"></select></label>
+  <label>Clientes por semana: <b id="simNVal"></b><input type="range" id="simN" min="1" max="10" value="3"></label>
+  <div class="out"><small>Exemplo de faturação por mês</small><strong id="simOut">0</strong><small id="simNote"></small></div>
+ </div>
+</div></section>
+
+<section id="pb" style="background:var(--surface)"><div class="wrap">
+ <h2>Experimente um prompt pronto</h2>
+ <p class="lead">Preencha os campos e veja o prompt a construir-se sozinho. Copie e cole na sua IA gratuita.</p>
+ <div class="panel reveal">
+  <label>O que vai criar<select id="pbSvc"></select></label>
+  <label>Tipo de negócio<input id="pbBiz" placeholder="Ex: padaria, salão, loja de roupa"></label>
+  <label>Nome do negócio<input id="pbName" placeholder="Ex: Pão Quente"></label>
+  <label>Contacto<input id="pbTel" placeholder="Ex: +258 84 000 0000"></label>
+  <textarea id="pbOut" readonly rows="6"></textarea>
+  <button class="btn" id="pbCopy" type="button">Copiar prompt</button>
+ </div>
+</div></section>
+
+<section id="plan"><div class="wrap">
+ <h2>O seu plano de 7 dias</h2>
+ <p class="lead">Um passo por dia. Toque num dia para ver o que fazer.</p>
+ <div class="tabs" id="planTabs" role="tablist"></div>
+ <div class="card tabpanel" id="planPanel" aria-live="polite"></div>
+</div></section>
+
+<section id="lead" style="background:var(--surface)"><div class="wrap">
+ <div class="panel reveal" id="leadBox">
+  <h2 style="font-size:26px">Receba 3 prompts grátis</h2>
+  <p class="lead" style="margin-bottom:14px">Deixe o seu WhatsApp e veja já 3 prompts do ebook, sem pagar nada.</p>
+  <form id="leadForm" novalidate>
+   <input id="lName" placeholder="O seu nome" autocomplete="name" required>
+   <input id="lTel" placeholder="WhatsApp, com indicativo (+258...)" inputmode="tel" autocomplete="tel" required>
+   <input id="lHp" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+   <label class="chk"><input type="checkbox" id="lOk"> Aceito receber mensagens da IA Academy</label>
+   <button class="btn" type="submit" id="lBtn">Ver os prompts grátis</button>
+   <p class="err" id="lErr"></p>
+  </form>
+  <div id="lFree" hidden></div>
+ </div>
+</div></section>
+
+<section style="padding-top:10px"><div class="wrap">
+ <div class="offer reveal" id="offerBox">
+  <h2 id="offerTitle"></h2>
+  <div class="price" data-price></div>
+  <p id="offerText"></p>
+  <a class="btn big" data-buy="offer" href="#"></a>
+ </div>
+</div></section>
+
+<section style="background:var(--surface)"><div class="wrap author">
+ <div><h2 id="authorTitle"></h2><p class="lead" style="margin-bottom:0" id="authorText"></p></div>
+</div></section>
+
+<section><div class="wrap"><h2 id="faqTitle"></h2><div id="faqList"></div></div></section>
+
+<footer><div class="wrap">© <span id="year"></span> <span id="footerText"></span></div></footer>
+
+<div class="bar" id="bar"><span data-price></span><a class="btn" data-buy="bar" href="#"></a></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.58.0/dist/umd/supabase.js"></script>
+<script src="js/config.js"></script>
+<script src="js/script.js"></script>
+<script src="js/features.js"></script>
+</body>
+</html>
